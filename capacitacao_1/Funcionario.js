@@ -1,4 +1,4 @@
-class Funcionario{
+export class Funcionario{
     #senha;
     constructor(idFuncionario,nomeFuncionario,senhaFuncionario){
 

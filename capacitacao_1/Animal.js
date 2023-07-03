@@ -1,4 +1,4 @@
-class Animal{
+export class Animal{
     constructor(idPet,nomePet,consultasPet){
 
         this.id=idPet;

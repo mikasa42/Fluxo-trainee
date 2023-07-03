@@ -1,4 +1,4 @@
-class Consulta{
+export class Consulta{
     constructor(idCliente,nomeCliente,nomePet,nomeFuncionario,statusConsulta,dataConsulta){
 
         this.id=idCliente;
