@@ -62,7 +62,7 @@ class Funcionario{
     }
 
 }
-class Consulta extends multi.inherit(Animal,Funcionario){
+class Consulta extends multi.inherit(Animal,Funcionario){//herança multipla. 
     constructor(idCliente,nomeCliente,nomePet,nomeFuncionario,statusConsulta,dataConsulta,consultasPet,idFuncionario,senhaFuncionario){
         super(idCliente,nomeCliente,fidelidadeCliente,tipoPetCliente,idPet,nomePet,consultasPet,idFuncionario,nomeFuncionario,senhaFuncionario);
         this.id=idCliente;
@@ -71,6 +71,16 @@ class Consulta extends multi.inherit(Animal,Funcionario){
         this.nomefuncionario=nomeFuncionario;
         this.statusconsulta=statusConsulta;
         this.dataconsulta=dataConsulta;
+    }
+    marcarConsulta(id,nomeC,nomeP,nomeF,status,dataC){
+        this.id = id;
+        this.nome=nomeC;
+        this.nomepet=nomeP;
+        this.nomefuncionario=nomeF;
+        this.statusconsulta=status;
+        this.dataconsulta=dataC;
+
+
     }
 }
 
@@ -102,7 +112,8 @@ const prompt = require("prompt-sync")({sigint:true});
 //Variaveis de controle.
 let i = 0;//Menu do sistema.
 let u = 0;// Sessão do usuario.
-let m = 0;
+let m = 0;//
+let posicao = 0;
 let verificacao =0;
 while(i!=2){
     console.log("\n\n")
@@ -160,7 +171,9 @@ while(i!=2){
                         
                     }
                     else if(u == 5){//Listar consultas 
-                        
+                        for(m=0; m<n.length; m++){//id,nomeC,nomeP,nomeF,status,dataC
+                            console.log(`id: ${consulta[m].id}, Nome Cliente:${consulta[m].nome},Nome Pet:${consulta[m].nomePet},Nome Funcionario:${consulta[m].nomeFuncionario},status:${consulta[m].statusconsulta} ,data:${consulta[m].dataconsulta}\n`);
+                        }
                     }
                     else if(u == 6){// Listar funcionarios
                         for(m=0; m<n.length; m++){//idFuncionario,nomeFuncionario,senhaFuncionario
@@ -169,21 +182,47 @@ while(i!=2){
                     }
                     else if(u == 7){//Marcar consulta
                         //idCliente,nomeCliente,nomePet,nomeFuncionario,statusConsulta,dataConsulta
-                        
+                        let id = parseInt(prompt('Digite o id do cliente:'));
+                        let nomeC = parseInt(prompt('Digite o nome do cliente:'));
+                        let nomeP = parseInt(prompt('Digite o nome do Pet:'));
+                        nomeF = n[m].nome;
+                        let status = "marcada";
+                        let dataC = parseInt(prompt('Digite a data nesse formato DIA/MES/ANO:'));
+                        marcarConsulta(id,nomeC,nomeP,nomeF,status,dataC);
+                        console.log(consulta);
+
                     }
                     else if(u == 8){
                         
                     }
                     else if(u == 9){
+                        console.log("Digite o id referente ao cliente que deseja apagar !")
+                        for(m=0; m<n.length; m++){//idFuncionario,nomeFuncionario,senhaFuncionario
+                            console.log(`id: ${c[m].id}, Nome:${c[m].nome}\n`);
+                        }
+                        posicao = parseInt(prompt('Digite a sua opcao:'));
+                        delete(c[i]);
                         
                     }
                     else if(u == 10){
+                        console.log("Digite o id referente ao pet que deseja apagar !")
+                        for(m=0; m<n.length; m++){//idFuncionario,nomeFuncionario,senhaFuncionario
+                            console.log(`id: ${a[m].id}, Nome:${a[m].nome}\n`);
+                        }
+                        posicao = parseInt(prompt('Digite a sua opcao:'));
+                        delete(a[i]);
                         
                     }
                     else if(u == 11){
                         
                     }
                     else if(u == 12){
+                        console.log("Digite o id referente ao funcionario que deseja apagar !")
+                        for(m=0; m<n.length; m++){//idFuncionario,nomeFuncionario,senhaFuncionario
+                            console.log(`id: ${n[m].id}, Nome:${n[m].nome}\n`);
+                        }
+                        posicao = parseInt(prompt('Digite a sua opcao:'));
+                        delete(n[i]);
                         
                     }
                     else{
@@ -206,7 +245,7 @@ while(i!=2){
         n[funcionarios] = new Funcionario(funcionarios,nomeF,senhaFun);
         let numFuncionarios = n[funcionarios].cadastro(funcionarios);
         funcionarios = numFuncionarios;
-        console.log(n);
+       // console.log(n);
 
     }
 
