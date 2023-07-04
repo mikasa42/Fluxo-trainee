@@ -19,17 +19,6 @@ class Animal extends Cliente{
         this.consulta=consultasPet;//numero de consultas 
     }
 }
-class Consulta extends Animal{
-    constructor(idCliente,nomeCliente,nomePet,nomeFuncionario,statusConsulta,dataConsulta){
-        super();
-        this.id=idCliente;
-        this.nome=nomeCliente;
-        this.nomepet=nomePet;
-        this.nomefuncionario=nomeFuncionario;
-        this.statusconsulta=statusConsulta;
-        this.dataconsulta=dataConsulta;
-    }
-}
 class Funcionario{
     //#senha;
     constructor(idFuncionario,nomeFuncionario,senhaFuncionario){
@@ -73,12 +62,25 @@ class Funcionario{
     }
 
 }
+class Consulta extends multi.inherit(Animal,Funcionario){
+    constructor(idCliente,nomeCliente,nomePet,nomeFuncionario,statusConsulta,dataConsulta,consultasPet,idFuncionario,senhaFuncionario){
+        super(idCliente,nomeCliente,fidelidadeCliente,tipoPetCliente,idPet,nomePet,consultasPet,idFuncionario,nomeFuncionario,senhaFuncionario);
+        this.id=idCliente;
+        this.nome=nomeCliente;
+        this.nomepet=nomePet;
+        this.nomefuncionario=nomeFuncionario;
+        this.statusconsulta=statusConsulta;
+        this.dataconsulta=dataConsulta;
+    }
+}
+
 
 "use strict";
 let n = [];
 let funcionarios = 0;
 let c = [];
 let a = [];
+let consulta = [];
 //idCliente,nomeCliente,fidelidadeCliente
 c[0] = new Cliente(0,'Ana','Thor','Nao');
 c[1] = new Cliente(1,'Mikaela','July','Sim');
@@ -166,6 +168,7 @@ while(i!=2){
                         }
                     }
                     else if(u == 7){//Marcar consulta
+                        //idCliente,nomeCliente,nomePet,nomeFuncionario,statusConsulta,dataConsulta
                         
                     }
                     else if(u == 8){
