@@ -1,7 +1,7 @@
-import{ Cliente } from "./Cliente.js";
-import { Consulta } from "./Consulta.js";
-import { Animal } from "./Animal.js";
-import { Funcionario } from "./Funcionario.js";
+const { Cliente } = require("./Cliente.js");
+const { Consulta } = require("./Consulta.js");
+const{ Animal } = require("./Animal.js");
+const { Funcionario } = require("./Funcionario.js");
 
 "use strict";
 
