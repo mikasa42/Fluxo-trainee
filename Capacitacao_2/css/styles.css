@@ -23,20 +23,27 @@ nav{
     background-color: black;
     height: 6vh;
 }
-img{
+.bg-image{
 
     position: relative;
     background-size: cover;
     height: 100vh;
-    opacity: 0.50;
+    width: 100vw;
+    /*opacity: 0.50;*/
+    display: block;
+    background: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgb(63, 61, 61));
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
     
 }
 .corpo{
     position:absolute;
     top: 10vh;
-    left: 50vh;
+    left: 60vh;
     height: 90vh;
-    width: 50vh;
+    width: 30vw;
     background-color: black;
 }
 h1{
