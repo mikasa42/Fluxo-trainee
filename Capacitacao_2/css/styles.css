@@ -1,11 +1,14 @@
 *{
     padding:0;
     margin: 0;
+    font-family: sans-serif;
 }
 a{
     color: rgb(244, 244, 245);
     text-decoration: none;
-    font-size: x-large;
+    font-size: 17px;
+    position: absolute;
+    margin-left: 40px;
 }
 a:hover{
     opacity: 0.5;
@@ -19,11 +22,17 @@ a:hover{
     width: 20px;
     background-color:white;
     border-radius: 50%;
+    margin-left: 8px;
 }
 nav{
     display: flex;
     background-color: black;
     height: 6vh;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 100;
+    width: 100%;
+    opacity: 0.7;
 }
 .bg-image{
 
@@ -31,7 +40,6 @@ nav{
     background-size: cover;
     height: 100vh;
     width: 100vw;
-    /*opacity: 0.50;*/
     display: block;
     background: no-repeat;
     background-size: cover;
@@ -42,43 +50,64 @@ nav{
 }
 .corpo{
     position:absolute;
+    justify-content: center;
     top: 10vh;
     left: 60vh;
     height: 90vh;
     width: 30vw;
     background-color: black;
+    border-radius: 10px;
 }
+.corpo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px; 
+  }
+.corpo p {
+    display: flex;
+    justify-content: center;
+  }
+.corpo form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
 
 h1{
     color: aliceblue;
     text-align: center;
     font-size: 20px;
-    
+    font-weight: bold;
 
 }
 .button{
     text-align: center;
     background-color: black;
     color: aliceblue;
-    height: 60px;
-    width: 250px;
-    border-radius: 20%;
-    border: solid white;
+    height: 8vh;
+    width: 23vw;
+    border-radius: 40px;
+    border: solid rgb(163, 163, 163) 1px;
 }
 .placeHolder{
     background-color: black;
-    height: 4vh;
+    color: rgb(255, 255, 255);
+    border: solid rgb(163, 163, 163) 1px;
+    height: 5vh;
     width: 20vw;
-
-
+    
 }
 label{
     color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 .login{
     height: 9vh;
     width: 20vw;
-    background-color: rgb(61, 240, 61);
+    background-color: rgb(21, 175, 21);
     border-radius: 40%;
 }
 #id{
