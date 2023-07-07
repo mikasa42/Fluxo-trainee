@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Spotfluxo</title>
 </head>
 <body>
@@ -19,20 +19,29 @@
             <div>
                 <h1>Entrar no Spotfluxo</h1>
                 <div class="button">
-                    <img class="img_logo" src="img/Google-Icon.png">
-                    <a>Continuar com o google</a>
+                    <div class="button-content">
+                        <img class="img_logo" src="img/Google-Icon.png">
+                        <span class="button-text">Continuar com o google</span>
+                    </div>
                 </div>
                 <div class="button">
-                    <img src="img/Facebook-Icon.png" class="img_logo">
-                    <a>Continuar com o facebook</a>
+                    <div class="button-content">
+                        <img src="img/Facebook-Icon.png" class="img_logo">
+                        <span class="button-text">Continuar com o facebook</span>
+                    </div>
                 </div>
                 <div class="button">
-                    <img src="img/aple2.png" class="img_logo">
-                    <a>Continuar com a apple</a>
+                    <div class="button-content">
+                        <img src="img/Apple-Icon.png" class="img_logo">
+                        <span class="button-text">Continuar com a apple</span>
+                    </div>
                 </div>
                 <div class="button">
-                    <a>Continuar com o numero de telefone</a>
+                    <div class="button-content">
+                        <span class="button-text">Continuar com o numero de telefone</span>
+                    </div>
                 </div>
+                
             </div>
             <p>__________________________</p>
             <div>
@@ -45,7 +54,7 @@
                         <input type="checkbox" id="check" lembrar senha>
                     </div>
                     <div>
-                        <input id="id" class="button" type="submit" value="Entrar" onclick="carregar()">
+                        <input id="id" class="button submit-btn" type="submit" value="Entrar" onclick="carregar()">
                     </div>
                     <div>
                         <a href="/">Esqueceu a senha ?</a>
