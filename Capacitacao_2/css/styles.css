@@ -112,4 +112,6 @@ label{
 }
 #id{
     background-color: rgb(61, 240, 61);
+    color: black;
+    font-weight: bold;
 }
