@@ -62,6 +62,7 @@ class Funcionario{
     }
 
 }
+/*
 class Consulta extends multi.inherit(Animal,Funcionario){//herança multipla. 
     constructor(idCliente,nomeCliente,nomePet,nomeFuncionario,statusConsulta,dataConsulta,consultasPet,idFuncionario,senhaFuncionario){
         super(idCliente,nomeCliente,fidelidadeCliente,tipoPetCliente,idPet,nomePet,consultasPet,idFuncionario,nomeFuncionario,senhaFuncionario);
@@ -83,7 +84,7 @@ class Consulta extends multi.inherit(Animal,Funcionario){//herança multipla.
 
     }
 }
-
+*/
 
 "use strict";
 let n = [];
